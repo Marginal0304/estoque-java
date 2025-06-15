@@ -14,6 +14,7 @@ public class Main extends Application {
         stage.setTitle("Estoque de Produtos");
         stage.setScene(scene);
         stage.show();
+        ///aaa
     }
 
     public static void main(String[] args) {
