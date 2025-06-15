@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.produtos.controller.ProdutoController" spacing="10" alignment="CENTER" prefWidth="500" prefHeight="400">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtId" GridPane.rowIndex="0" GridPane.columnIndex="1" editable="false"/>
+
+        <Label text="Nome:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtNome" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Preço:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtPreco" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Quantidade:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtQuantidade" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Adicionar Produto" onAction="#adicionarProduto"/>
+        <Button text="Atualizar Produto" onAction="#atualizarProduto"/>
+        <Button text="Excluir Produto" onAction="#excluirProduto"/>
+        <Button text="Exportar CSV" onAction="#exportarParaCSV"/>
+    </HBox>
+
+    <TableView fx:id="tabelaProdutos" prefHeight="200" prefWidth="480">
+        <columns>
+            <TableColumn text="ID" prefWidth="50" fx:id="colId"/>
+            <TableColumn text="Nome" prefWidth="150" fx:id="colNome"/>
+            <TableColumn text="Preço" prefWidth="100" fx:id="colPreco"/>
+            <TableColumn text="Quantidade" prefWidth="100" fx:id="colQuantidade"/>
+        </columns>
+    </TableView>
+</VBox>
